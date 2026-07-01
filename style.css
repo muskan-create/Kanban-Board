@@ -1,0 +1,193 @@
+*{
+margin: 0;
+padding: 0;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+html, 
+body{
+    width: 100%;
+    height: 100%;
+    
+
+
+}
+:root{
+    /* color pallte */
+
+    --bg-color:rgb(40, 40, 40);
+    --btn-color:#1a1a1a1a;
+    
+    --text-color:white;
+    
+    /* Padding Variable */
+    --nav-padding:1rem 2rem;
+    --section-padding:1rem 2rem;
+    --padding-sm:5px;
+    --padding-m:10px;
+    --padding-l:15px;
+    --padding-xl:20px;
+    --padding-xxl:30px;
+
+    
+}
+main{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    
+
+}
+body{
+    /* background-color: green; */
+    background-color: rgb(40, 40, 40);
+    color: var(--text-color);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--nav-padding);
+    align-items: center;
+}
+nav button{
+    padding: var(--padding-sm);
+    border-radius: 1rem;
+    /* border: none; */
+    outline: none;
+    background-color:var(--btn-color);
+    color: azure;
+    cursor:pointer;
+
+}
+nav button:active{
+    border:none;
+}
+section {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: var(--padding-xl);
+    /* background-color: red; */
+    
+    
+    
+}
+/* flex grow take the parent elemnt left out space when its call on child */
+section .task-col{
+/* background-color: blue; */
+background-color: rgb(34, 34, 34);
+flex-grow: 1;
+align-content:start ;
+display: flex;
+flex-direction: column;
+transition: all 0.7s ease-in-out;
+
+
+
+
+}
+section .task-col.trans{
+/* transform: scale(1.1); */
+scale: 1.05;
+border: 2px dashed white;
+
+
+}
+
+section .task-col .head{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgba(33, 33, 33, 0);
+    
+    align-items: center;
+}
+.task{
+    padding: 1rem;
+    background-color: rgba(50, 50, 51, 0.104);
+    border: 1px solid rgb(56, 55, 55);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor:grab;
+}
+.task:active{
+    cursor: grabbing;
+}
+.btn-del{
+    padding: 3px;
+    background-color:rgba(218, 4, 4, 0.773);
+    /* justify-content: end; */
+    align-self: flex-end;
+    border-radius: var(--padding-sm);
+    color: white;
+}
+.btn-del:active{
+    cursor: pointer;
+    border: none;
+    background-color:rgba(50, 50, 51, 0.104);
+
+    
+    
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+.modal .bg{
+    /* background-color: red; */
+    display: flex;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 58, 58, 0.048);
+    backdrop-filter: blur(5px);
+}
+
+.modal.active{
+    display: flex;
+
+}
+.center{
+    background-color: rgba(26, 26, 27, 0.552);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10%;
+    z-index: 10;
+    gap: var(--padding-m);
+    align-self: center;
+
+}
+.btn-del.add{
+
+    display: flex;
+    align-self: center;
+    width: fit-content;
+
+    
+}
+.btn-del.add:active{
+color: red;
+background-color: var(--bg-color);
+border: none;
+
+    
+}
+input,textarea{
+    background-color: var(--bg-color);
+    color: white;
+    padding: 5px;
+    border: none;
+    outline: none;
+
+}

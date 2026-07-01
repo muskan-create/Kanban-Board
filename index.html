@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <nav>
+            <div class="left">Kanban board</div>
+            <div class="rights"><button class="nav-btn " id="nav-add">Add New Task</button></div>
+        </nav>
+        <section class="board">
+
+            <div id="to-do" class="task-col">
+                <div class="head">
+                    <div class="left">to-do</div>
+                    <div class="right">count</div>
+                </div>
+                <!-- <div class="task" draggable="true">
+                    <h2>Task Title</h2>
+                    <p>Task Description</p>
+                    <button class="btn-del">Delete</button>
+                </div> -->
+            </div>
+            <div id="progress" class="task-col ">
+                <div class="head">
+                    <div class="left">progress</progress></div>
+                    <div class="right">count</div>
+                </div>
+                <!-- <div class="task" draggable="true">
+                    <h2>Task Title</h2>
+                    <p>Task Description</p>
+                    <button class="  btn-del">Delete</button>
+                </div> -->
+            </div>
+            <div id="done" class="task-col">
+                <div class="head">
+                    <div class="left">done</div>
+                    <div class="right">count</div>
+                </div>
+                <!-- <div class="task" draggable="true">
+                    <h2>Task Title</h2>
+                    <p>Task Description</p>
+                    <button class="btn-del">Delete</button>
+                </div> -->
+            </div>
+
+
+
+        </section>
+        <div class="modal">
+            <div class="bg" id="bg"></div>
+            <div class="center">
+                <input type="text" name=" TaskTitle " id="TaskTitle"
+                    placeholder="Write Task Title...">
+                <textarea name="Text " id="TitleDescription" placeholder="Title Description"></textarea>
+                <button class=" btn-del add"
+                id="AddTask">Add Task</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="(opt)script.js"></script>
+</body>
+
+</html>
